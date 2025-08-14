@@ -306,7 +306,9 @@ Untracked files:
 
 ```bash
 cd yourname_class_year_python
-echo This is my output for lesson 1 > lesson1_output.txt
+```
+create a file for each lesson output for example: Basics_1_Primitive_Datatypes_and_Operators.txt where all outputs for the lessons are stored
+```
 git status
 ```
 
@@ -314,7 +316,7 @@ git status
 
 ```
 Untracked files:
-        python_outputs/yourname_class_year_python/lesson1_output.txt
+        python_outputs/yourname_class_year_python/Basics_1_Primitive_Datatypes_and_Operators.txt
 ```
 
 ---
@@ -336,15 +338,19 @@ Already up to date.
 ### Step 5 – Stage your changes
 
 ```bash
-git add lesson1_output.txt
+git add Basics_1_Primitive_Datatypes_and_Operators.txt
 git status
 ```
 
 **Expected Output:**
 
 ```
+On branch main
+Your branch is up to date with 'origin/main'.
+
 Changes to be committed:
-        new file:   python_outputs/yourname_class_year_python/lesson1_output.txt
+  (use "git restore --staged <file>..." to unstage)
+	new file:   python_outputs/A_Abinaya_III_CS/Basics_1_Primitive_Datatypes_and_Operators.txt
 ```
 
 ---
@@ -352,7 +358,7 @@ Changes to be committed:
 ### Step 6 – Commit your work
 
 ```bash
-git commit -m "Add output for lesson 1"
+git commit -m "A_Abinaya_III_CS:Basics_1_Primitive_Datatypes_and_Operators.txt outputs completed"
 ```
 
 **Expected Output:**
@@ -398,7 +404,8 @@ To https://github.com/alagappainfotech/urcw_job_ready_course.git
 
 * [Udacity – Version Control with Git](https://www.udacity.com/course/version-control-with-git--ud123) *(Free)*
 * [MIT OCW – Python Programming](https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/) *(Free)*
-
+* [beginners_python_cheat_sheet_pcc_all.pdf](cheatsheets/beginners_python_cheat_sheet_pcc_all.pdf)
+* [git-cheat-sheet-education.pdf](cheatsheets/git-cheat-sheet-education.pdf)
 ---
 
 ## 11. Best Practices
