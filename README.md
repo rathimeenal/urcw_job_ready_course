@@ -1,384 +1,412 @@
-# URCW Job Ready Course Setup Instructions
+---
 
-# Ensure you have Python and Git installed on your system.
-# For Windows users, you can use the following commands to set up your environment.
-# Windows Setup Instructions
-# Open a terminal or command prompt and follow these steps to set up your environment:
-cd c:/Users/<your_administrator_id>/
-# Create a directory for your projects
+# URCW Job Ready Course – Setup & Submission Guide (with Expected Outputs)
+
+Welcome to the **URCW Job Ready Course** repository!
+Follow these step-by-step instructions to **set up your environment**, **verify each command’s output**, and **submit your work correctly**.
+
+---
+
+## 📋 Table of Contents
+
+1. [System Requirements](#1-system-requirements)
+2. [Setup Instructions](#2-setup-instructions)
+
+   * [Windows](#windows-setup)
+   * [macOS / Linux](#macos--linux-setup)
+3. [Verify Installation](#3-verify-installation)
+4. [Submitting Your Work](#4-submitting-your-work)
+
+---
+
+## 1. System Requirements
+
+✅ **Python 3.x** – [Download](https://www.python.org/downloads/)
+✅ **Git** – [Download](https://git-scm.com/downloads)
+✅ **Pip** – should come with Python
+✅ **Code Editor** – [PyCharm](https://www.jetbrains.com/pycharm/) or [VS Code](https://code.visualstudio.com/)
+
+---
+
+## 2. Setup Instructions
+
+### Windows Setup
+
+**1 – Navigate to your projects folder**
+
+```powershell
+cd C:/Users/<your_administrator_id>/
+```
+
+**Expected Output:**
+
+```
+C:\Users\<your_administrator_id>>
+```
+
+---
+
+**2 – Create PycharmProjects folder**
+
+```powershell
 mkdir PycharmProjects
-# Navigate to the projects directory
+```
+
+**Expected Output:**
+
+```
+Directory: C:\Users\<your_administrator_id>
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----        <date>     <time>                 PycharmProjects
+```
+
+---
+
+**3 – Go into the folder**
+
+```powershell
 cd PycharmProjects
-# Check if Git is installed
+```
+
+**Expected Output:**
+
+```
+C:\Users\<your_administrator_id>\PycharmProjects>
+```
+
+---
+
+**4 – Check Git version**
+
+```powershell
 git --version
-# If Git is not installed, download and install it from https://git-scm.com/downloads
-# After installing Git, you can clone the repository
+```
+
+**Expected Output:**
+
+```
+git version 2.43.0.windows.1
+```
+
+---
+
+**5 – Clone the repository**
+
+```powershell
 git clone https://github.com/alagappainfotech/urcw_job_ready_course.git
-# Navigate into the cloned repository
+```
+
+**Expected Output:**
+
+```
+Cloning into 'urcw_job_ready_course'...
+remote: Enumerating objects: XXX, done.
+remote: Counting objects: 100% (XXX/XXX), done.
+remote: Compressing objects: 100% (XXX/XXX), done.
+remote: Total XXX (delta XX), reused XX (delta XX), pack-reused XX
+Receiving objects: 100% (XXX/XXX), XX KiB | XX MiB/s, done.
+Resolving deltas: 100% (XX/XX), done.
+```
+
+---
+
+**6 – Enter the project folder**
+
+```powershell
+cd urcw_job_ready_course
+```
+
+**Expected Output:**
+
+```
+C:\Users\<your_administrator_id>\PycharmProjects\urcw_job_ready_course>
+```
+
+---
+
+**7 – Switch to main branch**
+
+```powershell
+git checkout main
+```
+
+**Expected Output:**
+
+```
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+```
+
+---
+
+**8 – Pull the latest code**
+
+```powershell
+git pull origin main
+```
+
+**Expected Output:**
+
+```
+Already up to date.
+```
+
+*or*
+
+```
+Updating 123abc4..456def7
+Fast-forward
+ file1.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+```
+
+---
+
+**9 – Check Python**
+
+```powershell
+python --version
+```
+
+**Expected Output:**
+
+```
+Python 3.12.2
+```
+
+---
+
+**10 – Create & activate virtual environment**
+
+```powershell
+python -m venv venv
+source venv/Scripts/activate
+```
+
+**Expected Output:**
+
+```
+(venv) C:\Users\<your_administrator_id>\PycharmProjects\urcw_job_ready_course>
+```
+
+---
+
+**11 – Install dependencies**
+
+```powershell
+pip install -r requirements.txt
+```
+
+**Expected Output:**
+
+```
+Collecting package1
+...
+Successfully installed package1-x.x.x package2-x.x.x
+```
+
+---
+
+### macOS / Linux Setup
+
+```bash
+# 1 – Navigate to your projects folder
+cd ~/
+
+# 2 – Create PycharmProjects folder
+mkdir PycharmProjects
+
+# 3 – Enter the folder
+cd PycharmProjects
+
+# 4 – Check Git version
+git --version
+# Expected: git version 2.xx.x
+
+# 5 – Clone repository
+git clone https://github.com/alagappainfotech/urcw_job_ready_course.git
+
+# 6 – Enter the project folder
 cd urcw_job_ready_course
 
+# 7 – Switch to main branch
 git checkout main
-# If the folder already exists, you can update it with:
+
+# 8 – Pull latest changes
 git pull origin main
 
-# Check if Python is installed
-python --version
-# If Python is not installed, download and install it from https://www.python.org/downloads/
-# After installing Python, you can check if pip is installed
+# 9 – Check Python version
+python3 --version
+# Expected: Python 3.12.x
+
+# 10 – Create and activate virtual environment
+python3 -m venv venv
+source venv/bin/activate
+
+# 11 – Install dependencies
+pip install -r requirements.txt
+```
+
+---
+
+## 3. Verify Installation
+
+```bash
 pip --version
-# If pip is not installed, you can install it by following the instructions at https://pip.pypa.io/en/stable/installation/
-# Check if pip3 is installed
 pip3 --version
 python3 --version
+```
 
-# Create a Python virtual environment
-# If you are using Python 3, you can create a virtual environment with:
-python -m venv venv
-# Activate the virtual environment
-source venv/Scripts/activate
-# Check if the virtual environment is activated
-# You should see the virtual environment name in your terminal prompt, like (venv) C:\Users\<your_administrator_id>\PycharmProjects\urcw_job_ready_course>
-
-# Install the required dependencies
-pip install -r requirements.txt
-
-
-# URCW Job Ready Course
-
-Welcome to the **URCW Job Ready Course** repository! This course is designed to help you master Python programming and related job-ready skills. Please follow the instructions below to set up your environment, contribute your work, and learn effectively.
-
----
-
-## Table of Contents
-
-- [Getting Started](#getting-started)
-- [Repository Structure](#repository-structure)
-- [Course Curriculum](#course-curriculum)
-- [How to Submit Your Work](#how-to-submit-your-work)
-- [Adding New Lessons](#adding-new-lessons)
-- [Python Concepts Covered](#python-concepts-covered)
-- [Contributing Guidelines](#contributing-guidelines)
-- [Contact](#contact)
-
----
-
-## Getting Started
-
-1. **Clone the Repository**
-    ```sh
-    git clone https://github.com/alagappainfotech/urcw_job_ready_course.git
-    cd urcw_job_ready_course
-    ```
-
-2. **Set Up Python Virtual Environment**
-    ```sh
-    python -m venv venv
-    source venv/bin/activate  # On macOS/Linux
-    # or
-    source venv/Scripts/activate  # On Windows
-    ```
-
-3. **Install Dependencies**
-    ```sh
-    pip install -r requirements.txt
-    ```
-
----
-
-## Repository Structure
+**Expected Output Example:**
 
 ```
-urcw_job_ready_course/
-├── basics/                    # Core Python lessons
-│   ├── 1/                    # Primitive data types and operators
-│   ├── 2/                    # Variables and collections
-│   ├── 3/                    # Control flow and iterables
-│   ├── 4/                    # Functions
-│   ├── 5/                    # Modules
-│   ├── 6/                    # Classes and OOP
-│   ├── 7/                    # Advanced topics
-│   ├── 8/                    # String manipulation and formatting
-│   ├── 9/                    # File handling and I/O
-│   └── 10/                   # Regular expressions
-├── django/                    # Django web framework lessons
-│   ├── 1_Introduction_to_Django.py
-│   └── 2_Django_Models_and_Database.py
-├── flask/                     # Flask web framework lessons
-│   └── 1_Introduction_to_Flask.py
-├── exercises/                 # Practice exercises
-│   ├── exercise_01.py        # Basic exercises
-│   ├── exercise_02.py
-│   ├── exercise_03.py
-│   ├── exercise_04.py
-│   ├── exercise_05.py
-│   ├── exercise_08_string_manipulation.py
-│   ├── exercise_09_file_handling.py
-│   ├── exercise_10_regex.py
-│   ├── exercise_django_01.py
-│   └── exercise_flask_01.py
-├── python_outputs/           # Student submissions
-├── main.py                   # Main application
-├── requirements.txt          # Python dependencies
-└── README.md                # This file
+pip 24.0 from /path/to/python/site-packages (python 3.12)
+pip 24.0 from /path/to/python/site-packages (python 3.12)
+Python 3.12.2
 ```
 
 ---
 
-## Course Curriculum
+## 4. Submitting Your Work
 
-### Core Python Programming (Lessons 1-10)
+### Step 1 – Navigate to `python_outputs`
 
-**Lesson 1: Primitive Data Types and Operators**
-- Numbers, strings, booleans
-- Mathematical operators
-- Comparison operators
-- Logical operators
+```bash
+cd python_outputs
+```
 
-**Lesson 2: Variables and Collections**
-- Lists, tuples, dictionaries, sets
-- Collection operations and methods
-- List comprehensions
+**Expected Output:**
 
-**Lesson 3: Control Flow and Iterables**
-- Conditional statements (if/elif/else)
-- Loops (for, while)
-- Exception handling
-- File I/O operations
-
-**Lesson 4: Functions**
-- Function definition and calling
-- Arguments and parameters
-- Lambda functions
-- Decorators and closures
-
-**Lesson 5: Modules**
-- Import statements
-- Creating modules
-- Package management
-
-**Lesson 6: Classes and Object-Oriented Programming**
-- Class definition and instantiation
-- Inheritance and polymorphism
-- Encapsulation
-- Special methods
-
-**Lesson 7: Advanced Topics**
-- Generators and iterators
-- Context managers
-- Decorators
-- Metaclasses
-
-**Lesson 8: String Manipulation and Formatting**
-- String methods and operations
-- String formatting (f-strings, .format())
-- Regular expressions basics
-- Text processing
-
-**Lesson 9: File Handling and I/O Operations**
-- File reading and writing
-- CSV and JSON processing
-- Binary file operations
-- Error handling in file operations
-
-**Lesson 10: Regular Expressions**
-- Pattern matching
-- String validation
-- Text extraction and replacement
-- Advanced regex features
-
-### Web Development with Django
-
-**Django Lesson 1: Introduction**
-- Django philosophy and features
-- Project setup and structure
-- Basic views and URL routing
-- Templates and Jinja2
-- Forms and validation
-- Admin interface
-
-**Django Lesson 2: Models and Database**
-- Django ORM
-- Model relationships
-- Database migrations
-- Query operations
-- Model methods and properties
-
-### Web Development with Flask
-
-**Flask Lesson 1: Introduction**
-- Flask philosophy and features
-- Application setup
-- Routes and views
-- Templates and Jinja2
-- Forms and request handling
-- API development
-
----
-
-## Python Concepts Covered
-
-### Core Concepts
-- ✅ Variables and Data Types
-- ✅ Input/Output Operations
-- ✅ Operators and Expressions
-- ✅ Conditional Statements
-- ✅ Loops and Iteration
-- ✅ Functions and Scope
-- ✅ Lists, Tuples, Sets, Dictionaries
-- ✅ String Manipulation
-- ✅ Exception Handling
-- ✅ File I/O Operations
-- ✅ Modules and Packages
-- ✅ List Comprehensions
-- ✅ Lambda Functions
-- ✅ Classes and Objects
-- ✅ Inheritance and Polymorphism
-- ✅ Generators and Iterators
-- ✅ Decorators
-- ✅ Regular Expressions
-- ✅ Context Managers
-
-### Web Development
-- ✅ Django Framework
-- ✅ Flask Framework
-- ✅ Database Operations
-- ✅ API Development
-- ✅ User Authentication
-- ✅ Form Handling
-- ✅ Template Systems
-
----
-
-## How to Submit Your Work
-
-1. **Create Your Directory under python_outputs folder**  
-   Format: `yourname_class_year_python`  
-   Example: `john_csc_1_python`
-
-2. **Add Your Files**  
-   Place your solutions, scripts, and outputs in your directory.
-
-3. **Commit and Push**
-    ```sh
-    git add yourname_class_year_python/
-    git commit -m "Add solutions for lesson X"
-    git push origin main
-    ```
-
----
-
-## Adding New Lessons
-
-To help students learn missing Python concepts, add new lessons in the appropriate folder. Each lesson should:
-
-- Be a separate `.py` file with detailed comments
-- Include example code and exercises
-- Follow the established naming convention
-- Include practical examples and use cases
-
-**Example Lesson Structure:**
-```python
-####################################################
-## Lesson Title
-####################################################
-
-# Introduction and overview
-# Detailed explanations with examples
-# Practical applications
-# Exercises for students
+```
+.../urcw_job_ready_course/python_outputs>
 ```
 
 ---
 
-## Exercises and Practice
+### Step 2 – Create your directory
 
-Each lesson includes comprehensive exercises:
+```bash
+mkdir yourname_class_year_python
+git status
+```
 
-- **Basic Exercises**: Fundamental concept practice
-- **Intermediate Exercises**: Real-world applications
-- **Advanced Exercises**: Complex problem-solving
-- **Project-Based Exercises**: Complete application development
+**Expected Output:**
 
-### Exercise Categories:
-- String manipulation and text processing
-- File handling and data processing
-- Regular expressions and pattern matching
-- Web development with Django and Flask
-- API development and testing
-- Database operations and ORM usage
+```
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        python_outputs/yourname_class_year_python/
+```
 
 ---
 
-## Contributing Guidelines
+### Step 3 – Add your `.txt` output files
 
-- Always pull the latest changes before pushing
-- Write clear, commented code
-- Submit your work in your individual directory
-- For new lessons, follow the commenting style shown above
-- Test your code before submitting
-- Include proper error handling
-- Follow PEP 8 coding standards
+```bash
+cd yourname_class_year_python
+echo This is my output for lesson 1 > lesson1_output.txt
+git status
+```
 
----
+**Expected Output:**
 
-## Contact
-
-For questions or support, please open an issue or contact the course instructor.
-
----
-
-## Additional Resources
-
-### Online Courses
-- **Udacity - Version Control with Git**
-  - Link: https://www.udacity.com/course/version-control-with-git--ud123
-  - Topics: Version control fundamentals, Git commands, branching and merging
-  - Cost: Free
-
-- **MIT OpenCourseWare - 6.0001 Introduction to Computer Science and Programming in Python**
-  - Link: https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/
-  - Topics: Core computer science concepts using Python
-  - Cost: Free
-
-### Recommended Learning Path
-1. Complete all core Python lessons (1-10)
-2. Practice with exercises for each lesson
-3. Build small projects using learned concepts
-4. Learn Django for full-stack web development
-5. Learn Flask for lightweight web applications
-6. Practice with real-world projects
-7. Contribute to open-source projects
+```
+Untracked files:
+        python_outputs/yourname_class_year_python/lesson1_output.txt
+```
 
 ---
 
-## Best Practices
+### Step 4 – Pull latest code before committing
 
-1. **Code Organization**
-   - Use meaningful variable and function names
-   - Write clear comments and documentation
-   - Follow PEP 8 style guidelines
-   - Use proper indentation and spacing
+```bash
+git pull origin main
+```
 
-2. **Error Handling**
-   - Always handle potential exceptions
-   - Provide meaningful error messages
-   - Use try-except blocks appropriately
-   - Validate user input
+**Expected Output:**
 
-3. **Testing**
-   - Write tests for your functions
-   - Test edge cases and error conditions
-   - Use unit testing frameworks
-   - Practice test-driven development
+```
+Already up to date.
+```
 
-4. **Version Control**
-   - Commit frequently with meaningful messages
-   - Use descriptive branch names
-   - Review code before merging
-   - Keep commits atomic and focused
+---
 
-5. **Documentation**
-   - Write clear docstrings for functions
-   - Document complex algorithms
-   - Include usage examples
-   - Keep README files updated
+### Step 5 – Stage your changes
+
+```bash
+git add lesson1_output.txt
+git status
+```
+
+**Expected Output:**
+
+```
+Changes to be committed:
+        new file:   python_outputs/yourname_class_year_python/lesson1_output.txt
+```
+
+---
+
+### Step 6 – Commit your work
+
+```bash
+git commit -m "Add output for lesson 1"
+```
+
+**Expected Output:**
+
+```
+[main abc1234] Add output for lesson 1
+ 1 file changed, 1 insertion(+)
+ create mode 100644 python_outputs/yourname_class_year_python/lesson1_output.txt
+```
+
+---
+
+### Step 7 – Push to GitHub
+
+```bash
+git push origin main
+```
+
+**Expected Output:**
+
+```
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 320 bytes | 320.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/alagappainfotech/urcw_job_ready_course.git
+   abc1234..def5678  main -> main
+```
+
+---
+
+## 9. Contributing Guidelines
+
+* Pull latest changes before pushing
+* Write clear, commented, PEP 8-compliant code
+* Include error handling
+* Test before committing
+
+---
+
+## 10. Additional Resources
+
+* [Udacity – Version Control with Git](https://www.udacity.com/course/version-control-with-git--ud123) *(Free)*
+* [MIT OCW – Python Programming](https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/) *(Free)*
+
+---
+
+## 11. Best Practices
+
+* **Code Organization** → Meaningful names, consistent style
+* **Error Handling** → Use try/except
+* **Testing** → Unit tests for functions
+* **Version Control** → Commit often, meaningful messages
+* **Documentation** → Clear docstrings & updated README
+
+---
