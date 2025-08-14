@@ -7,6 +7,18 @@ Follow these step-by-step instructions to **set up your environment**, **verify 
 
 ---
 
+## Training Resources
+
+* **Python** [MIT OCW – Python Programming](https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/) *(Free)*
+* **Python Basics Cheatsheet** [beginners_python_cheat_sheet_pcc_all.pdf](cheatsheets/beginners_python_cheat_sheet_pcc_all.pdf)
+* **Python Documentation** [docs.python.org](https://docs.python.org/3/)
+* **Git** [Pro Git Book](https://git-scm.com/book/en/v2
+* **Github** [Udacity – Version Control with Git](https://www.udacity.com/course/version-control-with-git--ud123) *(Free)*
+* **Github Cheatsheet** [git-cheat-sheet-education.pdf](cheatsheets/git-cheat-sheet-education.pdf)
+* **Github Profile** https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile?authuser=0
+
+---
+
 ## 📋 Table of Contents
 
 1. [System Requirements](#1-system-requirements)
@@ -397,18 +409,10 @@ To https://github.com/alagappainfotech/urcw_job_ready_course.git
 * Write clear, commented, PEP 8-compliant code
 * Include error handling
 * Test before committing
+* Use meaningful commit messages
+* Follow the directory structure
 
----
-
-## 10. Additional Resources
-
-* [Udacity – Version Control with Git](https://www.udacity.com/course/version-control-with-git--ud123) *(Free)*
-* [MIT OCW – Python Programming](https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/) *(Free)*
-* [beginners_python_cheat_sheet_pcc_all.pdf](cheatsheets/beginners_python_cheat_sheet_pcc_all.pdf)
-* [git-cheat-sheet-education.pdf](cheatsheets/git-cheat-sheet-education.pdf)
----
-
-## 11. Best Practices
+## 10. Best Practices
 
 * **Code Organization** → Meaningful names, consistent style
 * **Error Handling** → Use try/except
