@@ -18,7 +18,7 @@ else:                  # This is optional too.
 # Match/Case — Introduced in Python 3.10
 # It compares a value against multiple patterns and executes the matching case block.
 
-command = "run"
+command = "say_hi"
 
 match command:
     case "run":
